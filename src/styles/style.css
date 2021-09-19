@@ -1,0 +1,376 @@
+/** CLEARING GLOBAL STYLE */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  line-height: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/** HEADER */
+
+header {
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 10;
+  height: 150px;
+  width: 100%;
+  background-color: #2e3192;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  -webkit-box-shadow: 2px 2px 10px -0px rgba(0, 0, 0, 0.27);
+  box-shadow: 2px 2px 10px -0px rgba(0, 0, 0, 0.27);
+}
+
+header .header-content-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1820px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu > li {
+  float: left;
+  margin-left: 15px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  padding: 8px 12px;
+  background-color: #cacaca;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.menu a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #2e3192;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.menu > li:hover {
+  background-color: #ffff;
+}
+
+.submenu {
+  min-width: 200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.submenu > li {
+  width: 100%;
+  margin-bottom: 12px;
+  transition: background-color 0.5s;
+}
+
+.submenu > li:hover {
+  background-color: #cecece;
+}
+
+.menu > li > .submenu {
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.content-image {
+  margin-top: 40px;
+}
+
+.content-image img {
+  width: 100%;
+}
+
+.content-video {
+  width: 100%;
+  height: 440px;
+  background-color: red;
+  margin-top: 40px;
+}
+
+.content-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  --logo-width: 500px;
+
+  width: var(--logo-width);
+  margin: 8px 0;
+  background-color: #fafafa;
+  padding: 0 60px;
+  font-size: 45px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  word-spacing: var(--logo-width);
+  font-weight: bold;
+  color: #2e3192;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 18px;
+}
+
+/** CONTENT */
+
+.content-container {
+  margin: 0 auto;
+  z-index: 5;
+  width: 50vw;
+  max-width: 1200px;
+  min-width: 700px;
+  min-height: 1000px;
+  padding: 150px 15px 15px 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 15px -1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 1px 15px -1px rgba(0, 0, 0, 0.45);
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 40px;
+}
+
+.content-header img {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  align-self: center;
+}
+
+.content-header h1 {
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 45px;
+}
+
+.content-header h2 {
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.content-header-text {
+  padding: 25px 0;
+}
+
+.content-header-text h1 {
+  padding-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .content-container {
+    width: 100vw;
+  }
+}
+
+.content-body > p {
+  line-height: 28px;
+  margin-top: 1.56em;
+  margin-bottom: -0, 46em;
+  font-family: fell, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.content {
+  padding: 25px;
+}
+
+.content > p {
+  margin-bottom: 40px;
+}
+
+label {
+  display: block;
+  padding: 12px 0;
+}
+
+.row {
+  display: flex;
+}
+
+.long-text {
+  height: 120px !important;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+button[type="submit"] {
+  width: 180px;
+  height: 40px;
+  background-color: #2e3192;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e2174;
+}
+
+.form-ct {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+}
+
+.form-ct input[type="text"] {
+  transition: border-color 0.5s;
+  padding: 2px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.form-ct input:last-child {
+  margin-bottom: 0;
+}
+
+.form-ct input:hover {
+  border-color: #919191;
+}
+
+/** FOOTER */
+
+footer {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #535353;
+  color: white;
+  z-index: 10;
+}
+
+.footer-content-wrapper {
+  padding: 15px;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-column h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-column li {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/** Extra */
+
+#contagem-table {
+  width: 650px;
+  border: 0;
+}
+
+#contagem-head {
+  background-color: #7c7c7c !important;
+  color: white;
+}
+
+#contagem-head th {
+  padding: 10px;
+}
+
+#contagem-table tr {
+  height: 50px;
+}
+
+#contagem-table th {
+  text-align: start;
+}
+
+#contagem-table td {
+  text-align: start;
+  padding: 10px;
+}
+
+#contagem-table tr:nth-child(2n + 1) {
+  background-color: #cacaca;
+}
